@@ -6,7 +6,7 @@ use generator::{boost_four_momenta, correct_masses, init_four_momenta};
 use rayon::prelude::*;
 
 /// Bare rambo struct for namespacing methods.
-struct Rambo;
+pub struct Rambo;
 
 impl Rambo {
     /// Generate `nevents` phase-space events for a process with final state

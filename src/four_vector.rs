@@ -17,13 +17,13 @@ impl FourMomentum {
         }
     }
     /// Compute the squared mass of a four-momentum.
-    pub fn sqared_mass(&self) -> f64 {
+    pub fn squared_mass(&self) -> f64 {
         self.e * self.e - self.px * self.px - self.py * self.py - self.pz * self.pz
     }
     /// Compute the mass of a four-momentum. If the squared mass is negative,
     /// then the return value is : -sqrt(-m^2).
     pub fn mass(&self) -> f64 {
-        let m2 = self.sqared_mass();
+        let m2 = self.squared_mass();
 
         if m2 < 0.0 {
             -(-m2).sqrt()
